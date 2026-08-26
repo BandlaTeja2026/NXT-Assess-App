@@ -1,0 +1,4 @@
+import {useNavigate} from 'react-router-dom'
+import Header from '../Header'
+const ASSESSMENT_IMAGE='/assets/assessment.svg'
+export default function Home(){const navigate=useNavigate();return <><Header/><main className="home"><section className="home-content"><div><p className="eyebrow">NXT ASSESSMENT PLATFORM</p><h1 className="eyebrow"><b>Instructions</b></h1><p className="lead"><b>1.Total Questions:</b> 10</p><p className="lead"><b>2.Types of Questions:</b> MCQs</p><p className="lead"><b>3.Duration:</b> 10 Mins</p><p className="lead"><b>4.Marking Scheme:</b> Each correct answer carries 1 mark.</p><p className="lead">5.All the progress will be lost,if you reload during the assessment.</p><button className="primary start" onClick={()=>navigate('/assessment')}>Start Assessment <span>→</span></button></div><div className="home-art"><img src={ASSESSMENT_IMAGE} alt="assessment"/></div></section></main></>}
