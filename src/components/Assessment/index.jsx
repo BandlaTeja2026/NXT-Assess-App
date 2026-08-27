@@ -2,8 +2,8 @@ import {useCallback,useEffect,useRef,useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Header from '../Header'
 import {useEvaluation} from '../../context/EvaluationContext'
+import localQuestions from '../../data/questions'
 
-const QUESTIONS_API='https://apis.ccbp.in/assess/questions'
 const FAILURE_IMAGE='./assets/failure.svg'
 const ASSESSMENT_SECONDS=600
 const secondsText=value=>`${String(Math.floor(value/60)).padStart(2,'0')}:${String(value%60).padStart(2,'0')}`
@@ -27,10 +27,7 @@ export default function Assessment(){
   const getQuestions=useCallback(async()=>{
     setStatus('loading');setCurrent(0);setTime(ASSESSMENT_SECONDS);submitted.current=false
     try{
-      const response=await fetch(QUESTIONS_API)
-      if(!response.ok)throw new Error('Unable to load questions')
-      const data=await response.json()
-      setQuestions(data.questions||[])
+      setQuestions(localQuestions)
       setStatus('success')
     }catch{setStatus('failure')}
   },[])

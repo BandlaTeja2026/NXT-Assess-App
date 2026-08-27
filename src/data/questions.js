@@ -1,0 +1,14 @@
+const questions = [
+  {id: 'react-developer', question_text: 'React JS is developed by?', options_type: 'DEFAULT', options: [{text: 'Facebook', is_correct: 'true'}, {text: 'Twitter', is_correct: 'false'}, {text: 'Microsoft', is_correct: 'false'}, {text: 'Google', is_correct: 'false'}]},
+  {id: 'state-initialization', question_text: 'Which of the following is used to initialize state in a React class component?', options_type: 'SINGLE_SELECT', options: [{text: 'constructor', is_correct: 'true'}, {text: 'componentDidMount', is_correct: 'false'}, {text: 'render', is_correct: 'false'}, {text: 'componentWillUnmount', is_correct: 'false'}]},
+  {id: 'keys', question_text: 'Keys help React identify which items have changed, been added, or been removed.', options_type: 'DEFAULT', options: [{text: 'False', is_correct: 'false'}, {text: 'True', is_correct: 'true'}]},
+  {id: 'props', question_text: 'Which statement about React props is correct?', options_type: 'SINGLE_SELECT', options: [{text: 'They are read-only', is_correct: 'true'}, {text: 'They can only be numbers', is_correct: 'false'}, {text: 'They change state directly', is_correct: 'false'}, {text: 'They are only used in class components', is_correct: 'false'}]},
+  {id: 'lifecycle', question_text: 'Which is a React component life-cycle phase?', options_type: 'DEFAULT', options: [{text: 'Mounting', is_correct: 'false'}, {text: 'Updating', is_correct: 'false'}, {text: 'Unmounting', is_correct: 'false'}, {text: 'All of the above', is_correct: 'true'}]},
+  {id: 'cookies', question_text: 'Cookies are stored on the server.', options_type: 'DEFAULT', options: [{text: 'False', is_correct: 'true'}, {text: 'True', is_correct: 'false'}]},
+  {id: 'styling', question_text: 'Which is a way to style a React component?', options_type: 'SINGLE_SELECT', options: [{text: 'CSS Stylesheet', is_correct: 'false'}, {text: 'Styled Components', is_correct: 'false'}, {text: 'Inline Styling', is_correct: 'false'}, {text: 'All of the above', is_correct: 'true'}]},
+  {id: 'flexbox', question_text: 'Which is a CSS Flexbox property?', options_type: 'DEFAULT', options: [{text: 'margin', is_correct: 'false'}, {text: 'align-items', is_correct: 'true'}, {text: 'height and width', is_correct: 'false'}, {text: 'padding', is_correct: 'false'}]},
+  {id: 'hooks', question_text: 'Which Hook lets a function component keep local state?', options_type: 'DEFAULT', options: [{text: 'useState', is_correct: 'true'}, {text: 'useFetch', is_correct: 'false'}, {text: 'useClass', is_correct: 'false'}, {text: 'useComponent', is_correct: 'false'}]},
+  {id: 'jsx', question_text: 'JSX is best described as:', options_type: 'DEFAULT', options: [{text: 'A syntax extension for JavaScript', is_correct: 'true'}, {text: 'A database', is_correct: 'false'}, {text: 'A CSS framework', is_correct: 'false'}, {text: 'A web server', is_correct: 'false'}]},
+]
+
+export default questions

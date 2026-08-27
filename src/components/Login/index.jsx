@@ -1,8 +1,9 @@
 import {useState} from 'react'
 import {Navigate,useLocation,useNavigate} from 'react-router-dom'
 
-const LOGIN_API='https://apis.ccbp.in/login'
 const LOGO='./assets/nxt-assess-logo.svg'
+const DEMO_USERNAME='rahul'
+const DEMO_PASSWORD='rahul@2021'
 
 export default function Login(){
   const[user,setUser]=useState('')
@@ -20,14 +21,8 @@ export default function Login(){
     setError('')
     setLoading(true)
     try{
-      const response=await fetch(LOGIN_API,{
-        method:'POST',
-        headers:{'Content-Type':'text/plain'},
-        body:JSON.stringify({username:user,password}),
-      })
-      const data=await response.json()
-      if(!response.ok)throw new Error(data.error_msg||'Unable to sign in')
-      localStorage.setItem('jwt_token',data.jwt_token)
+      if(user!==DEMO_USERNAME||password!==DEMO_PASSWORD)throw new Error('Invalid username or password')
+      localStorage.setItem('jwt_token','local-assessment-session')
       navigate(location.state?.from?.pathname||'/',{replace:true})
     }catch(err){
       setError(err.message||'Unable to sign in. Please try again.')
