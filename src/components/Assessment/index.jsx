@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import Header from '../Header'
 import {useEvaluation} from '../../context/EvaluationContext'
 
-const QUESTIONS_API='/api/assess/questions'
+const QUESTIONS_API='https://apis.ccbp.in/assess/questions'
 const FAILURE_IMAGE='/assets/failure.svg'
 const ASSESSMENT_SECONDS=600
 const secondsText=value=>`${String(Math.floor(value/60)).padStart(2,'0')}:${String(value%60).padStart(2,'0')}`
