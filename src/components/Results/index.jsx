@@ -2,8 +2,8 @@ import {Navigate,useNavigate} from 'react-router-dom'
 import Header from '../Header'
 import {useEvaluation} from '../../context/EvaluationContext'
 
-const SUBMIT_IMAGE='/assets/submit.svg'
-const TIME_UP_IMAGE='/assets/time-up.svg'
+const SUBMIT_IMAGE='./assets/submit.svg'
+const TIME_UP_IMAGE='./assets/time-up.svg'
 
 export default function Results(){
   const navigate=useNavigate()
